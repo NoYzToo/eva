@@ -224,11 +224,11 @@ openModal.addEventListener('click', () => {
 modalWondow.addEventListener('click', (e) => {
     if (!e.target.closest('.modal-content')) {
         modalWondow.classList.remove('modal-window-active')
+        setTimeout(() => {
+            doc.body.style.overflow = 'auto'
+            doc.body.style.paddingRight = '0px' 
+        }, 500);
     }
-    setTimeout(() => {
-        doc.body.style.overflow = 'auto'
-        doc.body.style.paddingRight = '0px' 
-    }, 500);
 })
 
 
